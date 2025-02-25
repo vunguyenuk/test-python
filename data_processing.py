@@ -1,11 +1,6 @@
 # File: data_processing.py
 def process_data(data):
-    result = []
-    for i in range(len(data)):
-        item = data[i]
-        if isinstance(item, int) and item > 0:
-            transformed_item = item * 2
-            result.append(transformed_item)
-        else:
-            result.append(0)
-    return result
+    return [
+        item * 2 if isinstance(item, int) and item > 0 else 0
+        for item in data
+    ]
