@@ -1,0 +1,12 @@
+# Policy Violation: Storing passwords in plain text
+user_data = {
+    "username": "john_doe",
+    "password": "123456"  # Storing password without encryption
+}
+
+def authenticate(username, password):
+    if user_data["username"] == username and user_data["password"] == password:
+        return "Login successful"
+    return "Invalid credentials"
+
+print(authenticate("john_doe", "123456"))
